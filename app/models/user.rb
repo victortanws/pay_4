@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :comments,
+             :dependent => :destroy
+
   has_many   :debtorcreditors,
              :class_name => "Debt",
              :foreign_key => "other_id",
