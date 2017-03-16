@@ -16,7 +16,7 @@
 
       <% @debts.each do |debt| %>
       <tr>
-        <td><%= debt.user_id %></td>
+        <td><%= debt.user.email %></td>
         <td><%= debt.other_id %></td>
         <td>
           <a href="/debts/<%= debt.id %>" class="btn btn-primary">Show</a>
