@@ -15,6 +15,10 @@ class Payment < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :debt,
+             :through => :user,
+             :source => :debts
+
   # Validations
 
 end
